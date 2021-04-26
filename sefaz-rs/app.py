@@ -174,7 +174,7 @@ def main():
     menu = ["HOME", "LOGIN", "CRIAR CONTA", "SOBRE"]
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "HOME":
-        st.subheader("Faz a analise das NFC-E/RS, e reorna uma análise de consumo do consumidor.")
+        st.subheader("Faz a analise das NFC-E/RS, e retorna uma análise de consumo do consumidor, além de possibilitar a exportação da NFC-e para Excel")
         st.subheader("Para iniciar faça login no Menu a esquerda.")
 
 
@@ -182,7 +182,7 @@ def main():
         st.subheader("Página de Autenticação no Sistema")
         username = st.sidebar.text_input("User Name")
         password = st.sidebar.text_input("Password", type='password')
-        if st.sidebar.checkbox("Login"):
+        if st.sidebar.checkbox("<- Marque para iniciar o Login"):
             ####st.dataframe(result)
             if not login_user(engine, username, password ).empty:
                 #password is true:
@@ -270,7 +270,7 @@ def main():
                 "Mantido por [Paulo Klein](https://www.linkedin.com/in/pauloklein/). "
                 "Me visite também em https://github.com/Tianoklein")
 
-        html_temp = '''<a href="mailto:tianoklein@hotmail.com?subject=Streamlit NFC-E Parse&body=Tenho uma sugestão: "> <h3>  Duvidas, Criticas, Sugestões, ou me pague uma cerveja! </h3></a>'''
+        html_temp = '''<a href="mailto:tianoklein@hotmail.com?subject=Streamlit NFC-E Parse&body=Tenho uma sugestão: "> <h3>  Duvidas, Criticas, Sugestões ou se quiser me pagar uma cerveja! 😂</h3></a>'''
         components.html(html_temp)   
         
 

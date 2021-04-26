@@ -20,7 +20,7 @@ https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=4321019301500600399665123000316
 ![alt text](DigitalNFExample.JPG)
 
 ### OBS:
- - Each Region of Brazil (States) has you own way to store the NFC-e. We need a single screat for eache state ( 27 + DF).
+ - Each Region of Brazil (States) has you own way to store the NFC-e. We need to build a single screap for eache state ( 27 + DF) site.
  - Some Regions use captcha, other no.
 
 ### TODO:
