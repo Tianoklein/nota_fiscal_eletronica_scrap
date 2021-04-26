@@ -76,6 +76,7 @@ def psql_select_table_full(engine, schema, table, username):
 
 #### CONFIGURAÇÃO DA BASE
 def psql_select_table(engine, schema, table, campo, filtro, username):
+    print ("ENTREI##################")
     schema1 = '"'+ schema +'"'
     table1  = '"'+ table +'"'
     campo1 = '"' + campo +'"'
@@ -199,7 +200,7 @@ def main():
                         st.subheader("enviando...")
                         df_nota = psql_select_table(engine, schema, tabela_notas, "p", p.lower(), username)
                         st.dataframe(df_nota)
-                        if len(df_nota.index.values) == 0:
+                        if df_nota.empty:
                             print('DataFrame is empty!')
                             url = 'https://www.sefaz.rs.gov.br/ASP/AAE_ROOT/NFE/SAT-WEB-NFE-NFC_QRCODE_1.asp?p='+ p
                             st.text(url)
