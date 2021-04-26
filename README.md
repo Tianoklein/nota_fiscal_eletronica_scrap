@@ -1,0 +1,2 @@
+# nota_fiscal_eletronica_scrap
+ nota_fiscal_eletronica_scrap
