@@ -76,7 +76,6 @@ def psql_select_table_full(engine, schema, table, username):
 
 #### CONFIGURAÇÃO DA BASE
 def psql_select_table(engine, schema, table, campo, filtro, username):
-    st.write("ENTREI##################")
     schema1 = '"'+ schema +'"'
     table1  = '"'+ table +'"'
     campo1 = '"' + campo +'"'
@@ -84,6 +83,7 @@ def psql_select_table(engine, schema, table, campo, filtro, username):
     sql_command1 = ("SELECT * FROM {}.{} WHERE {}.{} = '{}' AND {}.{} = '{}'".format(schema1.lower(),table1.lower(),table1.lower(),campo1,filtro, table1.lower(),username1,username))
     st.write (sql_command1)
     df = pd.read_sql_query(sql_command1, con=engine)
+    st.write(df)
     conn = engine.raw_connection()
     conn.commit()
     return df
