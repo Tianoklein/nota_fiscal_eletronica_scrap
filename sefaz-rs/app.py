@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from sqlalchemy import create_engine
+import sqlalchemy
 import psycopg2 
 import io
 import codecs
@@ -59,7 +60,7 @@ def add_userdata(data, tablename):
 def login_user(engine, username, password):
     sql_command1 = ("SELECT * FROM userstable WHERE username = '{}' AND password = '{}'".format(username,password))
     #print (sql_command1)
-    df = pd.read_sql_query(sql_command1, con=engine)
+    df = pd.read_sql_query(sqlalchemy.text(sql_command1), con=engine)
     return df
     
 def psql_select_table_full(engine, schema, table, username):
@@ -69,7 +70,7 @@ def psql_select_table_full(engine, schema, table, username):
     username1 = '"username"' 
     sql_command1 = ("SELECT * FROM {}.{} WHERE username = '{}'".format(schema,table,username.lower()))
     #print (sql_command1)
-    df = pd.read_sql_query(sql_command1, con=engine)
+    df = pd.read_sql_query(sqlalchemy.text(sql_command1), con=engine)
     conn = engine.raw_connection()
     conn.commit()
     return df
@@ -82,8 +83,8 @@ def psql_select_table(engine, schema, table, campo, filtro, username):
     username1 = '"username"' 
     sql_command1 = ("SELECT * FROM {}.{} WHERE {}.{} = '{}' AND {}.{} = '{}'".format(schema1.lower(),table1.lower(),table1.lower(),campo1,filtro, table1.lower(),username1,username))
     st.write (sql_command1)
-    df = pd.read_sql_query(sql_command1, con=engine)
-    st.write(df)
+    df = pd.read_sql_query(sqlalchemy.text(sql_command1), con=engine)
+    st.write
     conn = engine.raw_connection()
     conn.commit()
     return df
