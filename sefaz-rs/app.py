@@ -196,6 +196,7 @@ def main():
                     ##retira só o parâmetro:
                     p = url[url.find("?P=")+3:url.find("?P=")+110]
                     if st.button("Enviar"):
+                        st.subheader("enviando...")
                         df_nota = psql_select_table(engine, schema, tabela_notas, "p", p.lower(), username)
                         st.dataframe(df_nota)
                         if df_nota.empty:
