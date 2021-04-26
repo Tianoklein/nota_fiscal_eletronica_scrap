@@ -10,6 +10,10 @@ In this document there is a QRCode, with the electronic address of the document 
 
 The idea of this work is to make the NFC-e content available in a dataframe that is easily transformed into an excel spreadsheet.
 
+
+See the sample:
+https://share.streamlit.io/tianoklein/nota_fiscal_eletronica_scrap/main/sefaz-rs/app.py
+
 ### The fisical document:
 ![alt text](NF_Example.jpeg)
 
