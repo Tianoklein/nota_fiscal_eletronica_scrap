@@ -199,7 +199,7 @@ def main():
                         st.subheader("enviando...")
                         df_nota = psql_select_table(engine, schema, tabela_notas, "p", p.lower(), username)
                         st.dataframe(df_nota)
-                        if df_nota.empty:
+                        if len(df_nota.index.values) == 0:
                             print('DataFrame is empty!')
                             url = 'https://www.sefaz.rs.gov.br/ASP/AAE_ROOT/NFE/SAT-WEB-NFE-NFC_QRCODE_1.asp?p='+ p
                             st.text(url)
