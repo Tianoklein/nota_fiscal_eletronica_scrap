@@ -197,6 +197,7 @@ def main():
                     p = url[url.find("?P=")+3:url.find("?P=")+110]
                     if st.button("Enviar"):
                         df_nota = psql_select_table(engine, schema, tabela_notas, "p", p.lower(), username)
+                        st.dataframe(df_nota)
                         if df_nota.empty:
                             print('DataFrame is empty!')
                             url = 'https://www.sefaz.rs.gov.br/ASP/AAE_ROOT/NFE/SAT-WEB-NFE-NFC_QRCODE_1.asp?p='+ p
