@@ -82,9 +82,7 @@ def psql_select_table(engine, schema, table, campo, filtro, username):
     campo1 = '"' + campo +'"'
     username1 = '"username"' 
     sql_command1 = ("SELECT * FROM {}.{} WHERE {}.{} = '{}' AND {}.{} = '{}'".format(schema1.lower(),table1.lower(),table1.lower(),campo1,filtro, table1.lower(),username1,username))
-    st.write (sql_command1)
     df = pd.read_sql_query(sqlalchemy.text(sql_command1), con=engine)
-    st.write
     conn = engine.raw_connection()
     conn.commit()
     return df
