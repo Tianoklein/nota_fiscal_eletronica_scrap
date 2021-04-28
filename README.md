@@ -11,22 +11,30 @@ In this document there is a QRCode, with the electronic address of the document 
 The idea of this work is to make the NFC-e content available in a dataframe that is easily transformed into an excel spreadsheet.
 
 
-See the sample:
-https://share.streamlit.io/tianoklein/nota_fiscal_eletronica_scrap/main/sefaz-rs/app.py
+### See the sample in action:
+1) Access: https://share.streamlit.io/tianoklein/nota_fiscal_eletronica_scrap/main/sefaz-rs/app.py
+2) Copy the URL from the NFC-e QRCode: https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
+3) Paste the URL to the App:
+![alt text](URL_QRCode_NFC-e.JPG width="200" height="400" /)
+
+4) Download the NFC-e as Excel file:
+![alt text](Download NFC-e.JPG)
+
+
+
+## Examples: 
 ### The fisical document:
-![alt text](NF_Example.jpeg)
+![alt text](NF_Example.jpeg width="200" height="400" /)
 
-### QRCode address:
+### The URL address from NFC-e QRCode:
 https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
 ### The digital document:
-![alt text](DigitalNFExample.JPG)
-
-### OBS:
- - Each Region of Brazil (States) has you own way to store the NFC-e. We need to build a single screap for eache state ( 27 + DF) site.
- - Some Regions use captcha, other no.
+![alt text](DigitalNFExample.JPG width="200" height="400" /)
 
 ### TODO:
+ - Each Region of Brazil (States) has you own way to store the NFC-e. We need to build a single screap for eache state ( 27 + DF) site. I start from sefaz-rs.
+  - Some Regions use captcha, others no. 
  - Configure the streamlit-webrtc (https://github.com/whitphx/streamlit-webrtc/) to read the QRCode on Streamlit.
  - 
