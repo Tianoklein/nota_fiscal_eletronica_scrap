@@ -16,7 +16,9 @@ The idea of this work is to make the NFC-e content available in a dataframe that
 2) Copy the URL from the NFC-e QRCode: https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
 3) Paste the URL to the App:
-![alt text](URL_QRCode_NFC-e.JPG width="200" height="400" /)
+<img src="URL_QRCode_NFC-e.JPG" data-canonical-src="URL_QRCode_NFC-e.JPG" width="200" height="400" />
+
+
 
 4) Download the NFC-e as Excel file:
 ![alt text](Download NFC-e.JPG)
