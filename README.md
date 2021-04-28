@@ -17,23 +17,23 @@ The idea of this work is to make the NFC-e content available in a dataframe that
 2) Copy the URL from the NFC-e QRCode: https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
 3) Paste the URL to the App:
-<img src="URL_QRCode_NFC-e.JPG" data-canonical-src="URL_QRCode_NFC-e.JPG" width="400" height="400" />
-
+<img src="URL_QRCode_NFC-e.JPG" data-canonical-src="URL_QRCode_NFC-e.JPG" width="500" height="400" />
 
 
 4) Download the NFC-e as Excel file:
-<img src="Download NFC-e.JPG" data-canonical-src="Download NFC-e.JPG" width="400" height="400" />
+<img src="Download NFC-e.JPG" data-canonical-src="Download NFC-e.JPG" width="500" height="400" />
 
 
 ## Examples: 
 ### The fisical document:
-![alt text](NF_Example.jpeg width="200" height="400" /)
+<img src="NF_Example.jpeg" data-canonical-src="NF_Example.jpeg" width="500" height="400" />
 
 ### The URL address from NFC-e QRCode:
 https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
 ### The digital document:
-![alt text](DigitalNFExample.JPG width="200" height="400" /)
+<img src="DigitalNFExample.JPG" data-canonical-src="DigitalNFExample.JPG" width="500" height="400" />
+
 
 ### TODO:
  - Each Region of Brazil (States) has you own way to store the NFC-e. We need to build a single screap for eache state ( 27 + DF) site. I start from sefaz-rs.
