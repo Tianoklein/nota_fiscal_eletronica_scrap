@@ -12,7 +12,7 @@ The idea of this work is to make the NFC-e content available in a dataframe that
 
 
 ### See the sample in action:
-1) Access: https://share.streamlit.io/tianoklein/nota_fiscal_eletronica_scrap/main/sefaz-rs/app.py
+1) Access and logon: https://share.streamlit.io/tianoklein/nota_fiscal_eletronica_scrap/main/sefaz-rs/app.py
 
 2) Copy the URL from the NFC-e QRCode: https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
@@ -25,13 +25,13 @@ The idea of this work is to make the NFC-e content available in a dataframe that
 
 
 ## Examples: 
-### The fisical document:
+### NFC-e document:
 <img src="NF_Example.jpeg" data-canonical-src="NF_Example.jpeg" width="500" height="400" />
 
-### The URL address from NFC-e QRCode:
+### URL address from NFC-e QRCode:
 https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210193015006003996651230003165881244534711%7C2%7C1%7C1%7C816163C18D6D59DB901C3CAC9DE3D4776283E09B
 
-### The digital document:
+### Digital document from sefa-rs:
 <img src="DigitalNFExample.JPG" data-canonical-src="DigitalNFExample.JPG" width="500" height="400" />
 
 
