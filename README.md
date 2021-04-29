@@ -35,7 +35,7 @@ https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=4321019301500600399665123000316
 <img src="DigitalNFExample.JPG" data-canonical-src="DigitalNFExample.JPG" width="500" height="400" />
 
 
-### TODO:
+### TODO :
  - Each Region of Brazil (States) has you own way to store the NFC-e. We need to build a single screap for eache state ( 27 + DF) site. I start from sefaz-rs.
   - Some Regions use captcha, others no. 
  - Configure the streamlit-webrtc (https://github.com/whitphx/streamlit-webrtc/) to read the QRCode on Streamlit.
