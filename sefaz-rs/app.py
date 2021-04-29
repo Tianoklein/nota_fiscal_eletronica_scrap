@@ -78,7 +78,7 @@ def psql_select_table_full(engine, schema, table, username):
 
 #### CONFIGURAÇÃO DA BASE
 def create_nfc_e_table():
-    sql_command = ('CREATE TABLE IF NOT EXISTS nfc_e (codigo TEXT, Descricao TEXT, Qtde TEXT, Un TEXT, Vl_Unit DECIMAL(2), Vl_Total DECIMAL(2), Identificacao TEXT, Estabelecimento TEXT, data_nota TEXT, url TEXT, p TEXT, username  TEXT)')
+    sql_command = ('CREATE TABLE IF NOT EXISTS nfc_e (codigo TEXT, Descricao TEXT, Qtde TEXT, Un TEXT, Vl_Unit DECIMAL(2), vl_total DECIMAL(2), Identificacao TEXT, Estabelecimento TEXT, data_nota TEXT, url TEXT, p TEXT, username  TEXT)')
     with engine.connect() as con:
         rs = con.execute(sql_command)
 
@@ -126,9 +126,9 @@ def trataConsumidor(se_Consumidor):
 
 def trataNFCe(se_NFC):
     sTABLE_10 = se_NFC.values.reshape(int(se_NFC.size/6),6)
-    headers=['Codigo', 'Descricao', 'Qtde', 'Un', 'Vl_Unit', 'Vl_Total']
+    headers=['Codigo', 'Descricao', 'Qtde', 'Un', 'Vl_Unit', 'vl_total']
     df_TABLE_10=pd.DataFrame(sTABLE_10[1:], columns=headers)
-    df_TABLE_10['Vl_Total'] = df_TABLE_10['Vl_Total'].replace(',','.', regex=True).astype(float)
+    df_TABLE_10['vl_total'] = df_TABLE_10['vl_total'].replace(',','.', regex=True).astype(float)
     df_TABLE_10['Vl_Unit'] = df_TABLE_10['Vl_Unit'].replace(',','.', regex=True).astype(float)
     return df_TABLE_10
 
