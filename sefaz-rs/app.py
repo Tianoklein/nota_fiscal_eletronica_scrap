@@ -45,6 +45,7 @@ def create_userstable():
     with engine.connect() as con:
         rs = con.execute(sql_command)
 
+
 def add_userdata(data, tablename):
     '''Novo Usuáro: dataframe, table name''' 
     data.head(0).to_sql(tablename, engine, if_exists='append',index=False) #truncates the table
@@ -76,6 +77,13 @@ def psql_select_table_full(engine, schema, table, username):
     return df
 
 #### CONFIGURAÇÃO DA BASE
+def create_nfc_e_table():
+    sql_command = ('CREATE TABLE IF NOT EXISTS nfc_e (codigo TEXT, Descricao TEXT, Qtde TEXT, Un TEXT, Vl_Unit TEXT, Vl_Total TEXT, Identificacao TEXT, Estabelecimento TEXT, data_nota TEXT, url TEXT)')
+
+    with engine.connect() as con:
+        rs = con.execute(sql_command)
+
+
 def psql_select_table(engine, schema, table, campo, filtro, username):
     schema1 = '"'+ schema +'"'
     table1  = '"'+ table +'"'
@@ -196,6 +204,7 @@ def main():
                     ##retira só o parâmetro:
                     p = url[url.find("?P=")+3:url.find("?P=")+110]
                     if st.button("Enviar"):
+                        create_nfc_e_table()
                         df_nota = psql_select_table(engine, schema, tabela_notas, "p", p.lower(), username)
                         
                         if df_nota.empty:
@@ -257,7 +266,7 @@ def main():
         new_password = st.text_input("Senha:", type='password')
         
         if st.button("Signup"):
-            #create_userstable()
+            create_userstable()
             df = pd.DataFrame([[new_user,new_password]], columns=('username', 'password'))
             add_userdata(df, "userstable")
             st.success("Nova Conta de usuário foi criada")
