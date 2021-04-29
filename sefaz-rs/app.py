@@ -242,7 +242,7 @@ def main():
                             st.text("download")
                             st.markdown(get_table_download_link(df_analytics), unsafe_allow_html=True)
                             st.dataframe(df_analytics)
-                            st.text("Total  {}".format(df_analytics['Vl_Total'].sum()))
+                            st.text("Total  {}".format(df_analytics['vl_total'].sum()))
                             data = df_analytics.iloc[:, 0:-3]
                             exclude_unique = list(data.columns[data.nunique() <= 1])
                             data = data[[col for col in data.columns if col not in exclude_unique]]
