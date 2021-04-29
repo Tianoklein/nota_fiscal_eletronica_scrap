@@ -78,8 +78,7 @@ def psql_select_table_full(engine, schema, table, username):
 
 #### CONFIGURAÇÃO DA BASE
 def create_nfc_e_table():
-    sql_command = ('CREATE TABLE IF NOT EXISTS nfc_e (codigo TEXT, Descricao TEXT, Qtde TEXT, Un TEXT, Vl_Unit TEXT, Vl_Total TEXT, Identificacao TEXT, Estabelecimento TEXT, data_nota TEXT, url TEXT)')
-
+    sql_command = ('CREATE TABLE IF NOT EXISTS nfc_e (codigo TEXT, Descricao TEXT, Qtde TEXT, Un TEXT, Vl_Unit DECIMAL(2), Vl_Total DECIMAL(2), Identificacao TEXT, Estabelecimento TEXT, data_nota TEXT, url TEXT, p TEXT, username  TEXT)')
     with engine.connect() as con:
         rs = con.execute(sql_command)
 
@@ -229,7 +228,7 @@ def main():
                             st.success('Nota já cadastrada! Carregando...')
                         ###EXIBE DATAFRAME DA NOTA
                         st.dataframe(df_nota)
-                        st.text("Total da Nota {}".format(df_nota['Vl_Total'].sum()))
+                        st.text("Total da Nota {}".format(df_nota['vl_total'].sum()))
                     ############################## 
                     #Adicionar um novo Post
                 elif task =="Anaytics":
